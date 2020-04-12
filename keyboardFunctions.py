@@ -5,6 +5,14 @@ from clibboard import *
 def pressed(keyCombination):
     return keyboard.is_pressed(keyCombination)
 
+def altPressed(keyCombination):
+    if keyboard.is_pressed('alt+' + keyCombination) == False:
+        return False
+    while True:
+        if pressed('alt') == False and pressed(keyCombination) == False:
+            break
+    return True
+
 def getSelection():
     prevCopy = getClipboard()
     keyboard.press_and_release('ctrl+c')

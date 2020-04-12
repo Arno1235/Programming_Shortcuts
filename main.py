@@ -2,13 +2,13 @@ from keyboardFunctions import *
 from functions import *
 
 if __name__ == "__main__":
+
     while True:
-        if pressed('ctrl+i'):
+        if altPressed('c'):
             comment()
-            break
-        if pressed('ctrl+up'):
+        if altPressed('right'):
             addTab()
-            break
-        if pressed('ctrl+down'):
+        if altPressed('left'):
             removeTab()
+        if altPressed('q'):
             break

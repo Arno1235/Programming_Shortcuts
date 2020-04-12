@@ -13,7 +13,6 @@ def addTab():
     out = ""
     for i in getSelection().split("\n"):
         out += "    " + i + "\n"
-        print(out)
     placeText(out)
 
 def removeTab():
